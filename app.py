@@ -13,4 +13,5 @@ comments = soup.find_all("div",attrs={"class":"ReviewCard-module-34AJ_"})
 for comment in comments:
     print(comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).strong.string)
     # print(comment.find("strong"))
+    s
 
