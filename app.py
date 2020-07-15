@@ -11,7 +11,7 @@ soup = BeautifulSoup(r.content,"lxml")
 comments = soup.find_all("div",attrs={"class":"ReviewCard-module-34AJ_"})
 
 for comment in comments:
-    print(comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).strong.string)
+    # Şimdilik sadece yorumları kim yaptı ise onların isimlerini çektik.
+    print(comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).strong.string) 
     # print(comment.find("strong"))
-    s
 
