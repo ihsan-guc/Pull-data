@@ -18,7 +18,7 @@ while i < 5:
         # Şimdilik sadece yorumları kim yaptı ise onların isimlerini çektik.
         print("{}-) Name : {} \n \t Comment:{}".format(j,comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).strong.string,comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).span.string))
         j+=1
+        # ilk Başta bir yorumu aldık aldıktan sonra o yorumun içinde strong ve span da yazan verileri çektik
         # print(comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).strong.string) 
         # print(comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).span.string) 
-        # print(comment.find("strong"))
     i+=1
