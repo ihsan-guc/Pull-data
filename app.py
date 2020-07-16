@@ -10,6 +10,8 @@ from bs4 import BeautifulSoup
 
 i = 1;
 j = 1;
+# Burada Belirtiğimiz değer sayfa sayısı sayfa sayısı var olan sayfa sayısından fazla ise otomatik olarak başa dönderir
+# yapılması gereken sayfa sayısına bakmak ve ona göre veri yazmak.
 while i < 5:
     r = requests.get("https://www.hepsiburada.com/poco-f2-pro-128-gb-poco-turkiye-garantili-p-HBV00000UPERS-yorumlari?sayfa={}".format(i))
     soup = BeautifulSoup(r.content,"lxml")
