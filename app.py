@@ -16,20 +16,20 @@ size = 0;
 
 matris = [
     ["https://www.hepsiburada.com/xiaomi-redmi-note-9-128-gb-xiaomi-turkiye-garantili-p-HBV00000UGU4C-yorumlari?sayfa={}",3],
-    ["https://www.hepsiburada.com/iphone-11-64-gb-p-HBV00000NSBZ6-yorumlari?sayfa={}",27]
+    ["https://www.hepsiburada.com/iphone-11-64-gb-p-HBV00000NSBZ6-yorumlari?sayfa={}",27],
     ["https://www.hepsiburada.com/poco-f2-pro-128-gb-poco-turkiye-garantili-p-HBV00000UPERS-yorumlari?sayfa={}",4]]
-while size < len(matris):
-    while i <= matris[size][1]:
-        r = requests.get(matris[size][0].format(i))
-        soup = BeautifulSoup(r.content,"lxml")
-        comments = soup.find_all("div",attrs={"class":"ReviewCard-module-34AJ_"})
-        for comment in comments:
-            # Şimdilik sadece yorumları kim yaptı ise onların isimlerini çektik.
-            print("{}-) Name : {} \n \t Comment:{}".format(j,comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).strong.string,comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).span.string))
-            j+=1
-            # ilk Başta bir yorumu aldık aldıktan sonra o yorumun içinde strong ve span da yazan verileri çektik
-            # print(comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).strong.string) 
-            # print(comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).span.string) 
-        i+=1
-    i = 1;
-    size+=1
+# while size < len(matris):
+#     while i <= matris[size][1]:
+#         r = requests.get(matris[size][0].format(i))
+#         soup = BeautifulSoup(r.content,"lxml")
+#         comments = soup.find_all("div",attrs={"class":"ReviewCard-module-34AJ_"})
+#         for comment in comments:
+#             # Şimdilik sadece yorumları kim yaptı ise onların isimlerini çektik.
+#             print("{}-) Name : {} \n \t Comment:{}".format(j,comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).strong.string,comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).span.string))
+#             j+=1
+#             # ilk Başta bir yorumu aldık aldıktan sonra o yorumun içinde strong ve span da yazan verileri çektik
+#             # print(comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).strong.string) 
+#             # print(comment.find("div",attrs={"class":"ReviewCard-module-2dVP9"}).span.string) 
+#         i+=1
+#     i = 1;
+#     size+=1
